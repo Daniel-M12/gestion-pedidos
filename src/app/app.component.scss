@@ -7,3 +7,9 @@
 .redondear{
     border-radius: 50%;
 }
+
+@media (min-width: 768px){
+    .collapse{
+        align-self: end;
+    }
+}
