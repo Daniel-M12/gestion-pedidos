@@ -1,66 +1,11 @@
 
 <div class="container text-center mesas-container">
-    <div class="mesa">
-        <button class="boton-mesa">
-            <a routerLink="menu">
-              <img src="../assets/table_atention.png" alt="Mesa" width="75em" height="75em">
-              <p>Mesa 1</p>
-            </a>
-        </button>
-      </div>
-      <div class="mesa">
-        <button class="boton-mesa">
+    <div *ngFor="let mesa of mesas" class="mesa">
+      <button class="boton-mesa">
+          <a routerLink="{{mesa.id}}/menu">
             <img src="../assets/table_atention.png" alt="Mesa" width="75em" height="75em">
-            <p>Mesa 2</p>
-        </button>
-      </div>
-      <div class="mesa">
-        <button class="boton-mesa">
-            <img src="../assets/table_atention.png" alt="Mesa" width="75em" height="75em">
-            <p>Mesa 3</p>
-        </button>
-      </div>
-      <div class="mesa">
-        <button class="boton-mesa">
-            <img src="../assets/table_atention.png" alt="Mesa" width="75em" height="75em">
-            <p>Mesa 4</p>
-        </button>
-      </div>
-      <div class="mesa">
-        <button class="boton-mesa">
-            <img src="../assets/table_atention.png" alt="Mesa" width="75em" height="75em">
-            <p>Mesa 5</p>
-        </button>
-      </div>
-      <div class="mesa">
-        <button class="boton-mesa">
-            <img src="../assets/table_atention.png" alt="Mesa" width="75em" height="75em">
-            <p>Mesa 6</p>
-        </button>
-      </div>
-      <div class="mesa">
-        <button class="boton-mesa">
-            <img src="../assets/table_atention.png" alt="Mesa" width="75em" height="75em">
-            <p>Mesa 7</p>
-        </button>
-      </div>
-      <div class="mesa">
-        <button class="boton-mesa">
-            <img src="../assets/table_atention.png" alt="Mesa" width="75em" height="75em">
-            <p>Mesa 8</p>
-        </button>
-      </div>
-      <div class="mesa">
-        <button class="boton-mesa">
-            <img src="../assets/table_atention.png" alt="Mesa" width="75em" height="75em">
-            <p>Mesa 9</p>
-        </button>
-      </div>
-      <div class="mesa">
-        <button class="boton-mesa">
-            <img src="../assets/table_atention.png" alt="Mesa" width="75em" height="75em">
-            <p>Mesa 10</p>
-        </button>
-      </div>
-    
-  </div>
+            <p>{{mesa.nombre}}</p>
+          </a>
+      </button>
+    </div>    
+</div>
