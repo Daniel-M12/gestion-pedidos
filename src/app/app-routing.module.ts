@@ -4,12 +4,14 @@ import { HomeComponent } from './pages/home/home.component';
 import { MesasComponent } from './pages/mesas/mesas.component';
 import { ProductosComponent } from './pages/productos/productos.component';
 import { PedidoComponent } from './pages/pedido/pedido.component';
+import { MenuComponent } from './pages/menu/menu.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
   {path:'mesas', component: MesasComponent},
   {path:'productos', component: ProductosComponent},
-  {path:'pedidos', component: PedidoComponent}
+  {path:'pedidos', component: PedidoComponent},
+  {path:'mesas/menu', component:MenuComponent}
 ];
 
 @NgModule({
