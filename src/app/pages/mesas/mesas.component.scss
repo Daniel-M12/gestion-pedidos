@@ -2,9 +2,6 @@
 
 .mesas-container{
     padding-top: 4em;
-}
-
-.fila{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -16,14 +13,14 @@
 }
 
 @media screen and (min-width: 768px) {
-    .fila{
+    .mesas-container{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
 @media screen and (min-width: 992px) {
-    .fila{
+    .mesas-container{
         display: grid;
         grid-template-columns: repeat(5, 1fr);
     }
