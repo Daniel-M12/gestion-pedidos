@@ -41,6 +41,7 @@ export class ProductosComponent implements OnInit {
     })
     
     this.pedido.emit(this.pedidoItems);
+    
     this.ps.reiniciar_total();
     this.pedidoItems = [];
   }
