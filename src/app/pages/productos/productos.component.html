@@ -1,18 +1,16 @@
 <div class="container text-center">
     <div class="productos">
-        <div *ngFor="let producto of productos" class="card producto" style="width: 10rem; height: 18rem;">
-            <img src="{{producto.imagen}}" class="card-img-top" alt="{{producto.nombre}}" width="150em" height="150em">
+        <div *ngFor="let producto of productos" class="producto" style="width: 10rem; height: 18rem;">
+            <img [src]="producto.imagen" class="foto" [alt]="producto.nombre" width="150em" height="150em">
             <div class="card-body">
-              <h5 class="card-title">{{producto.nombre}}</h5>
-              <p class="card-text">S/{{producto.precio}}</p>
-              <a href="#" class="btn btn-primary stretched-link">Añadir</a>
+                <h5 class="nombre">{{producto.nombre}}</h5>
+                <p class="precio">S/{{producto.precio}}</p>
+                <div class="cantidad">
+                    <input [(ngModel)]="producto.cantidad" type="number" value="0">
+                    <button (click)="sumar_total(producto)" type="submit" class="btn btn-outline-secondary boton">Añadir</button>
+                </div>
             </div>
         </div>
-      <!--<div *ngFor="let producto of productos" class="col">
-        <img src="{{producto.imagen}}" alt="{{producto.nombre}}" width="150em" height="150em">
-        <h5>{{producto.nombre}}</h5>
-        <p>S/{{producto.precio}}</p>
-      </div>-->
     </div>
 </div>
 
