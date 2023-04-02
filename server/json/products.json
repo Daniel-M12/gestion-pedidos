@@ -36,7 +36,7 @@
             "id": 5,
             "nombre": "Sancochado",
             "categoria": "Fondos",
-            "precio": 28.00,
+            "precio": 30.00,
             "imagen": "../assets/platos/sancochado.png",
             "cantidad": 0
         },

@@ -1,1 +1,21 @@
-<p>productos works!</p>
+<div class="container text-center">
+    <div class="productos">
+        <div *ngFor="let producto of productos" class="producto" style="width: 10rem; height: 18rem;">
+            <img [src]="producto.imagen" class="foto" [alt]="producto.nombre" width="150em" height="150em">
+            <div class="card-body">
+                <h5 class="nombre">{{producto.nombre}}</h5>
+                <p class="precio">S/{{producto.precio}}</p>
+                <div class="cantidad">
+                    <input [(ngModel)]="producto.cantidad" type="number" value="0">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="botones">
+        <button (click)="calcular_total()" type="submit" class="btn btn-outline-secondary boton">Calcular total</button>
+        <button (click)="limpiar()" type="submit" class="btn btn-outline-secondary boton">Borrar</button>
+    </div>
+    <p>S/{{total}}</p>
+</div>
+
+

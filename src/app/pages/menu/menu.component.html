@@ -1,1 +1,7 @@
-<h1>menu works! {{ident}}</h1>
+<h1>Atención - Mesa {{idMesa}}</h1>
+
+<app-productos (pedido)="obtenerProductos($event)"></app-productos>
+
+<div class="boton">
+    <button (click)="realizarPedido()" type="button" class="btn btn-warning">Realizar pedido</button>
+</div>
