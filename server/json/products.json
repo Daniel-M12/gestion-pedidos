@@ -1,0 +1,25 @@
+{
+    "data":[
+        {
+            "id": 1,
+            "nombre": "Lomo saltado",
+            "categoria": "Fondos",
+            "precio": 45.00,
+            "imagen": "../assets/platos/lomo-saltado.png"
+        },
+        {
+            "id": 2,
+            "nombre": "Carapulcra",
+            "categoria": "Fondos",
+            "precio": 38.00,
+            "imagen": "../assets/platos/carapulcra.png"
+        },
+        {
+            "id": 3,
+            "nombre": "Estofado",
+            "categoria": "Fondos",
+            "precio": 25.00,
+            "imagen": "../assets/platos/estofado.png"
+        }
+    ]
+}
