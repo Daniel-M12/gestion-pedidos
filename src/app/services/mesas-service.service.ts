@@ -22,7 +22,7 @@ export class MesasServiceService {
   }
 
   constructor() {
-    this.agregar_mesas(13);
+    this.agregar_mesas(10);
   }
 
   obtener_mesas(){

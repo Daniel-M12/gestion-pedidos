@@ -11,7 +11,7 @@ import { MesasServiceService } from 'src/app/services/mesas-service.service';
 export class MesasComponent {
   mesas: any = [];
   
-  constructor(private readonly mesasService: MesasServiceService,){}
+  constructor(private readonly mesasService: MesasServiceService){}
 
   obtener_mesas(){
     this.mesas = this.mesasService.obtener_mesas();

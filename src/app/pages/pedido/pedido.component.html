@@ -1,1 +1,26 @@
 <p>pedido works!</p>
+
+<button (click)="verPedidos()" type="button" class="btn btn-warning">Ver pedidos</button>
+
+<div class="tabla">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+              <th scope="col"># Mesa</th>
+              <th scope="col">Pedidos</th>
+              <th scope="col">Atendido</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let pedido of listaPedidosPorMesa">
+            <tr>
+              <th scope="row">{{listaPedidosPorMesa[0].idMesa}}</th>
+              <td>{{listaPedidosPorMesa[0].pedido[0].nombre}}</td>
+              <td class="check">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                </div>
+              </td>
+            </tr>
+          </tbody>
+    </table>
+</div>
