@@ -16,7 +16,8 @@ export class MenuComponent {
 
   pedidoPorMesa: PedidoPorMesa = {
     idMesa: 0,
-    pedido: []
+    pedido: [],
+    atendido: false
   };
 
   constructor(

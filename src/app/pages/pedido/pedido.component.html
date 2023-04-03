@@ -1,7 +1,7 @@
-<p>pedido works!</p>
-
-<button (click)="verPedidos()" type="button" class="btn btn-warning">Ver pedidos</button>
-
+<div class="botones">
+  <button (click)="mostrarEnTabla()" type="button" class="btn btn-warning">Llenar tabla</button>
+  <!--<button (click)="limpiarTabla()" type="button" class="btn btn-warning">Limpiar tabla</button>-->
+</div>
 <div class="tabla">
     <table class="table table-striped">
         <thead>
@@ -13,12 +13,16 @@
           </thead>
           <tbody *ngFor="let pedido of listaPedidosPorMesa">
             <tr>
-              <th scope="row">{{listaPedidosPorMesa[0].idMesa}}</th>
-              <td>{{listaPedidosPorMesa[0].pedido[0].nombre}}</td>
-              <td class="check">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                </div>
+              <th scope="row">{{pedido.idMesa}}</th>
+              <td>
+                <tr *ngFor="let plato of pedido.pedido">
+                  <td>{{plato.nombre}} - {{plato.cantidad}}</td>
+                </tr>
+              </td>
+              <td *ngFor="let plato of pedido.pedido" class="check">
+                <!--<div class="form-check">-->
+                    <input [(ngModel)]="plato.atendido" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <!--</div>-->
               </td>
             </tr>
           </tbody>

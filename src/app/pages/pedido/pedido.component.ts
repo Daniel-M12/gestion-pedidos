@@ -16,13 +16,62 @@ export class PedidoComponent implements OnInit {
   ){}
 
   ngOnInit(): void {
-    this.ms.pedidoMesaObs$.subscribe(data => {
-      this.listaPedidosPorMesa.push(data);
-      console.log("Datos del observable: " + data.idMesa + " - " + data.pedido[0]);
-    });
+
   }
 
-  verPedidos(){
-    console.log("Pedidos: " + this.listaPedidosPorMesa);
+  mostrarEnTabla(){
+    const pedidoGuardadoStr = localStorage.getItem('pedidoPorMesa');
+    
+    this.ms.pedidoMesaObs$.subscribe(data => {
+      this.listaPedidosPorMesa.push(data);
+      localStorage.setItem('pedidoPorMesa', JSON.stringify(this.listaPedidosPorMesa));
+    });
+
+    if (pedidoGuardadoStr) {
+      this.listaPedidosPorMesa = JSON.parse(pedidoGuardadoStr);
+    }
   }
+
+  /*
+  limpiarTabla(){
+    this.borrarAtendidos();
+  }
+
+  borrarCero(){
+    const pedidoGuardadoStr = localStorage.getItem('pedidoPorMesa');
+    if (pedidoGuardadoStr) {
+      this.listaPedidosPorMesa = JSON.parse(pedidoGuardadoStr);
+    }
+
+    let objetoAEliminar = this.listaPedidosPorMesa.find((pedidoMesa) => pedidoMesa.idMesa === 0);
+
+    if (objetoAEliminar) {
+      this.listaPedidosPorMesa = this.listaPedidosPorMesa.filter((pedidoMesa) => pedidoMesa.idMesa !== 0);
+      localStorage.setItem('nombreListaObjetos', JSON.stringify(this.listaPedidosPorMesa));
+    }
+  }
+
+  borrarAtendidos(){
+    const pedidoGuardadoStr = localStorage.getItem('pedidoPorMesa');
+    if (pedidoGuardadoStr) {
+      this.listaPedidosPorMesa = JSON.parse(pedidoGuardadoStr);
+    }
+
+    let objetoAEliminar = this.listaPedidosPorMesa.find((pedidoMesa) => this.verificarAtencion(pedidoMesa));
+
+    if (objetoAEliminar) {
+      this.listaPedidosPorMesa = this.listaPedidosPorMesa.filter((objeto) => objeto.idMesa !== 0);
+      localStorage.setItem('nombreListaObjetos', JSON.stringify(this.listaPedidosPorMesa));
+    }
+  }
+
+  verificarAtencion(pedidoMesa: PedidoPorMesa): Boolean{
+    let atendido = true;
+    pedidoMesa.pedido.forEach(plato => {
+      if(!plato.atendido){
+        atendido = false;
+      }
+    })
+    return atendido;
+  }*/
 }

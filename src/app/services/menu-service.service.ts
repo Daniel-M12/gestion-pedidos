@@ -11,7 +11,8 @@ export class MenuServiceService {
 
   pedidoMesaBehavior = new BehaviorSubject<PedidoPorMesa>({
     idMesa: 0,
-    pedido: []
+    pedido: [],
+    atendido: false
   });
 
   pedidoMesaObs$ = this.pedidoMesaBehavior.asObservable();
