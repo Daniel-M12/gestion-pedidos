@@ -1,1 +1,11 @@
-<p>mesas works!</p>
+
+<div class="container text-center mesas-container">
+    <div *ngFor="let mesa of mesas" class="mesa">
+      <button class="boton-mesa">
+          <a routerLink="{{mesa.id}}/menu">
+            <img src="../assets/table_atention.png" alt="Mesa" width="75em" height="75em">
+            <p>{{mesa.nombre}}</p>
+          </a>
+      </button>
+    </div>    
+</div>

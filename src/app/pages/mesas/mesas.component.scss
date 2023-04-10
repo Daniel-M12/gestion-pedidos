@@ -1,0 +1,31 @@
+@import "src/styles.scss";
+
+.mesas-container{
+    padding-top: 4em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.boton-mesa{
+    background: none;
+    border: 0em;
+    padding-bottom: 2em;
+    a{
+        text-decoration: none;
+        color: $negro;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .mesas-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .mesas-container{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
