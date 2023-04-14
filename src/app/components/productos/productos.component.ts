@@ -32,6 +32,16 @@ export class ProductosComponent implements OnInit {
     this.obtener_productos();
   }
 
+  minus(producto: Producto){
+    if(producto.cantidad > 0){
+      producto.cantidad--;
+    }
+  }
+
+  add(producto: Producto){
+    producto.cantidad++;
+  }
+
   calcular_total(){
     this.productos.forEach(producto => {
       if(producto.cantidad > 0){

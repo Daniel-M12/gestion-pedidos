@@ -6,7 +6,9 @@
                 <h5 class="nombre">{{producto.nombre}}</h5>
                 <p class="precio">S/{{producto.precio}}</p>
                 <div class="cantidad">
-                    <input [(ngModel)]="producto.cantidad" type="number" value="0">
+                    <button class="btn minus1" (click)="minus(producto)"><strong>-</strong></button>
+                    <input [(ngModel)]="producto.cantidad" type="number" value="0" min="0">
+                    <button class="btn add1" (click)="add(producto)"><strong>+</strong></button>
                 </div>
             </div>
         </div>
