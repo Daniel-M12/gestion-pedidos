@@ -11,6 +11,7 @@ import { MesasComponent } from './pages/mesas/mesas.component';
 import { ProductosComponent } from './components/productos/productos.component';
 import { PedidoComponent } from './pages/pedido/pedido.component';
 import { MenuComponent } from './pages/menu/menu.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MenuComponent } from './pages/menu/menu.component';
     MesasComponent,
     ProductosComponent,
     PedidoComponent,
-    MenuComponent
+    MenuComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
