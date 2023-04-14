@@ -39,8 +39,10 @@ export class MenuComponent {
   }
 
   realizarPedido(){
-    console.log("Realizar Pedido - Pedido de pedido por mesa: " + this.pedidoPorMesa.pedido);
-    this.ms.setPedido(this.pedidoPorMesa);
-    this.router.navigate(['pedidos']);
+    if(confirm("¿Está seguro que desea realizar el pedido?")){
+      console.log("Realizar Pedido - Pedido de pedido por mesa: " + this.pedidoPorMesa.pedido);
+      this.ms.setPedido(this.pedidoPorMesa);
+      this.router.navigate(['pedidos']);
+    }
   }
 }
