@@ -1,12 +1,67 @@
+@import "src/styles.scss";
 
+label{
+    color: $marron;
+    font-weight: 500;
+}
+
+.forgot-container{
+    display: flex;
+    justify-content: end;
+    .forgot{
+        text-decoration:none;
+        color: $crema;
+    &:hover{
+        color: $naranja;
+    }   
+    }
+}
+
+.botones{
+    .boton{
+        &:hover{
+            background-color: $crema;
+            border-color: $crema;
+            color: $amarillo;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .botones{
+        height: 7em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+
+        .boton{
+            flex-grow: 1;
+            padding: 0 6em;
+        }
+    }
+}
 
 @media screen and (min-width: 768px) {
+    .botones{
+        display: flex;
+        justify-content: start;
+        gap: 3em;
+        .boton{
+            padding: 0.5em 3em;
+        }
+    }
     .container-sm{
         padding: 0 10em;
     }
 }
 
 @media screen and (min-width: 992px) {
+    .botones{
+        display: flex;
+        justify-content: start;
+        gap: 3em;
+    }
     .container-sm{
         padding: 0 10em;
     }
