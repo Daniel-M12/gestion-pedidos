@@ -23,7 +23,7 @@ export class ProductosComponent implements OnInit {
   
   obtener_productos(){
     this.ps.get_products().subscribe((rest: any) => {
-      this.productos = rest.data;
+      this.productos = rest;
       console.log(this.productos);
     });
   }

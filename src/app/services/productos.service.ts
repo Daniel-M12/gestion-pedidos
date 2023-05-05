@@ -11,7 +11,7 @@ export class ProductosService {
   constructor(private readonly http: HttpClient) {}
 
   get_products(){
-    return this.http.get('/api/products/GetProducts');
+    return this.http.get('https://localhost:7235/productos');
   }
   
   sumar_total(producto: Producto){
