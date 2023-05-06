@@ -1,19 +1,21 @@
 
 <div class="container-sm">
-    <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Código de trabajador</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="NOMBRE12345">
-    </div>
-    <div class="mb-3">
-        <label for="inputPassword5" class="form-label">Contraseña</label>
-        <input type="password" id="inputPassword5" class="form-control" aria-labelledby="passwordHelpBlock" placeholder="******">
-    </div>
-    <div class="mb-3 forgot-container">
-        <a class="forgot">Olvidé mi contraseña</a>
-    </div>
-    <div class="mt-5 botones">
-        <button type="submit" class="btn btn-warning boton">Ingresar</button>
-        <!--<button type="button" class="btn btn-warning boton">Registro</button>-->
-    </div>
-    
+    <form [formGroup]="loginForm" method="post">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Código de trabajador</label>
+            <input type="text" formControlName="uid" class="form-control" id="exampleFormControlInput1" placeholder="NOMBRE12345">
+        </div>
+        <div class="mb-3">
+            <label for="inputPassword5" class="form-label">Contraseña</label>
+            <input type="password" formControlName="pwd" id="inputPassword5" class="form-control" aria-labelledby="passwordHelpBlock" placeholder="******">
+        </div>
+        <div class="mb-3 forgot-container">
+            <a class="forgot">Olvidé mi contraseña</a>
+        </div>
+        <div class="mt-5 botones">
+            <button (click)="onSubmit()" type="submit" [disabled]="loginForm.invalid" class="btn btn-warning boton">Ingresar</button>
+            <!--<button type="button" class="btn btn-warning boton">Registro</button>-->
+        </div>
+    </form>
+        
 </div>

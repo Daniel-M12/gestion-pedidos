@@ -13,6 +13,10 @@ export class ProductosService {
   get_products(){
     return this.http.get('https://localhost:7235/productos');
   }
+
+  insert_product(data: any, headers: any){
+    return this.http.post('https://localhost:7235/productos/insert', data, {headers});
+  }
   
   sumar_total(producto: Producto){
     console.log(producto);
