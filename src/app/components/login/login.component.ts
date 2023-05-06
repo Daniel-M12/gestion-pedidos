@@ -31,8 +31,8 @@ export class LoginComponent {
         sessionStorage.setItem('user', rest.data.dni);
         console.log(sessionStorage.getItem('token'));
 
-        this.router.navigateByUrl('/mesas',{skipLocationChange:false}).then(()=>{
-          this.router.navigate(['mesas']);
+        this.router.navigateByUrl('/admin',{skipLocationChange:false}).then(()=>{
+          this.router.navigate(['admin']);
           window.location.reload();
         })
       }else{
