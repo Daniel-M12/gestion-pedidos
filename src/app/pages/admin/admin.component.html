@@ -1,1 +1,30 @@
-<p>admin works!</p>
+
+<div class="container-sm">
+    <form [formGroup]="productosForm" method="post">
+        <h2>Agregar productos</h2>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nombre de producto</label>
+            <input type="text" formControlName="nombre" class="form-control" id="exampleFormControlInput1" placeholder="Estofado">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput2" class="form-label">Precio</label>
+            <input type="number" formControlName="precio" class="form-control" id="exampleFormControlInput2" placeholder="20.00">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput3" class="form-label">Imagen</label>
+            <input type="text" formControlName="imagen" class="form-control" id="exampleFormControlInput3" placeholder="../carpeta/imagen.png">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput4" class="form-label">Categoria</label>
+            <input type="number" formControlName="categoria" class="form-control" id="exampleFormControlInput4" placeholder="4, 5 o 6 (4: Fondos, 5: Postres, 6: Bebidas)">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput5" class="form-label">Descripción</label>
+            <input type="text" formControlName="descripcion" class="form-control" id="exampleFormControlInput5" placeholder="Plato delicioso">
+        </div>
+
+        <div class="mt-4 botones">
+            <button (click)="onSubmit()" type="submit" [disabled]="productosForm.invalid" class="btn btn-warning boton">Añadir</button>
+        </div>
+    </form>     
+</div>
