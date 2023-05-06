@@ -2,6 +2,7 @@
 
 .container{
     margin-top: 10px;
+    font-size: 1.1em;
 }
 
 .precio{
@@ -11,6 +12,9 @@
 .botones{
     display: flex;
     justify-content:space-evenly;
+    .btn{
+        font-size: 1.1em;
+    }
 }
 
 .productos{
@@ -46,6 +50,7 @@
             width: 3em;
             float: left;
             display: block;
+            
         }
         /*input[type=number]::-webkit-inner-spin-button,
         input[type=number]::-webkit-outer-spin-button {

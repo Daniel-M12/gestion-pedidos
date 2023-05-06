@@ -5,13 +5,15 @@ import { MesasComponent } from './pages/mesas/mesas.component';
 import { ProductosComponent } from './components/productos/productos.component';
 import { PedidoComponent } from './pages/pedido/pedido.component';
 import { MenuComponent } from './pages/menu/menu.component';
+import { AdminComponent } from './pages/admin/admin.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
   {path:'mesas', component: MesasComponent},
-  {path:'productos', component: ProductosComponent},
+  {path:'admin', component: AdminComponent},
   {path:'pedidos', component: PedidoComponent},
   {path:'mesas/:id/menu', component:MenuComponent}
+
 ];
 
 @NgModule({

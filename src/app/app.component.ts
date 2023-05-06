@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'gestion-pedidos';
+
+  token = sessionStorage.getItem('token');
+  user = sessionStorage.getItem('user');
 }

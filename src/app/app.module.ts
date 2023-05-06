@@ -13,6 +13,7 @@ import { ProductosComponent } from './components/productos/productos.component';
 import { PedidoComponent } from './pages/pedido/pedido.component';
 import { MenuComponent } from './pages/menu/menu.component';
 import { LoginComponent } from './components/login/login.component';
+import { AdminComponent } from './pages/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LoginComponent } from './components/login/login.component';
     ProductosComponent,
     PedidoComponent,
     MenuComponent,
-    LoginComponent
+    LoginComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
